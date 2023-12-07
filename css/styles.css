@@ -167,6 +167,9 @@ body{
     background-position: center;
 }
 
+.hero-container {
+    max-width: 1440px;
+}
 .hero-title{
     color: var(--WHITE, #FFF);
     text-align: center;
@@ -326,6 +329,8 @@ body{
 .social-list-icon {
     width: 16px;
     height: 16px;
+    fill: #F4F4FD;
+    transition: fill 250ms;
 }
 
 .social-list-item{
