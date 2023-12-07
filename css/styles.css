@@ -110,6 +110,7 @@ body{
     letter-spacing: 0.02em;
     padding-top: 24px;
     padding-bottom: 24px;
+    position: relative;
 }
 
 .menu-link:hover,
@@ -117,6 +118,16 @@ body{
     color: var(--OCEAN, #404BBF);
 }
 
+.menu-after:hover::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #404BBF;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 .contact{
     font-style: normal;
     display: flex;
@@ -139,6 +150,8 @@ body{
     background-color: #2E2F42;
     padding-top: 188px;
     padding-bottom: 188px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/people-office.jpg);
+    background-size: cover;
 }
 
 .hero-title{
@@ -213,6 +226,18 @@ body{
 .benefits-subtitle{
     margin-bottom: 8px;
 }
+
+.benefits-list-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    background-color: #F4F4FD;
+    margin-bottom: 8px;
+}
 /*======BENEFITS======*/
 /*======TEAM======*/
 .team-list-title{
@@ -248,6 +273,24 @@ body{
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+
+.social-list{
+    display: flex;
+    column-gap: 24px;
+    margin-top: 8px;
+    justify-content: center;
+}
+
+.social-list-link{
+    display: block;
+    line-height: 0;
+    fill: #4D5AE5;
+}
+
+.social-list-link:hover,
+.social-list-link:focus{
+    fill: #404BBF;
+}
 /*------/TEAM======*/
 /*=======PORTFOLIO======*/
 .portfolio-list{
@@ -269,6 +312,29 @@ body{
 .portfolio-section-subtitle{
     margin-bottom: 8px;
 }
+
+.portfolio-list-overlay{
+    position: relative;
+    overflow: hidden;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4D5AE5;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: transform 250ms linear;
+}
+
+.portfolio-list-item:hover .overlay {
+    transform: translateY(0%);
+}
 /*=======/PORTFOLIO======*/
 /*=======FOOTER=======*/
 .footer{
@@ -288,4 +354,28 @@ body{
 .logo-footer{
     display: inline-block;
     margin-bottom: 16px;
+}
+
+.social-media-title{
+    color: var(--WHITE, #FFF);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.social-media {
+    display: flex;
+    column-gap: 16px;
+    margin-top: 16px;
+}
+
+.social-media-link {
+    line-height: 0;
+    fill: #4D5AE5;
+}
+
+.social-media-link:hover,
+.social-media-link:focus {
+    fill: #31D0AA;
 }
