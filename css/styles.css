@@ -433,3 +433,9 @@ body{
 .social-media-link:focus {
     fill: #31D0AA;
 }
+
+.footer-container{
+    display: flex;
+    align-items: baseline;
+    margin-right: 120px;
+}
